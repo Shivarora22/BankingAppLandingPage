@@ -1,6 +1,5 @@
 import Navbar from './components/Navbar/Navbar'
 import HeroSection from './components/HeroSection/HeroSection'
-import TrustedBy from './components/TrustedBy/TrustedBy'
 import SolutionsGrid from './components/SolutionsGrid/SolutionsGrid'
 import CTABanner from './components/CTABanner/CTABanner'
 import DigitalBanking from './components/DigitalBanking/DigitalBanking'

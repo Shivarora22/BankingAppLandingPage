@@ -1,4 +1,5 @@
 import './Footer.css'
+import { ArrowIcon } from '../../assets/icons'
 
 const locations = [
   {
@@ -66,17 +67,7 @@ export default function Footer() {
                     <li key={item}>
                       <a href="#">
                         <span>{item}</span>
-                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <g clipPath="url(#clip0_24_4308)">
-                            <path d="M1.46269 7.48607H12.3802" stroke="#00B4FD" strokeWidth="0.935782" strokeLinecap="round" strokeLinejoin="round"/>
-                            <path d="M6.92145 2.0276L12.3802 7.48633L6.92145 12.9451" stroke="#00B4FD" strokeWidth="0.935782" strokeLinecap="round" strokeLinejoin="round"/>
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_24_4308">
-                              <rect width="13.5688" height="14.5046" fill="white" transform="translate(13.5688 14.5046) rotate(-180)"/>
-                            </clipPath>
-                          </defs>
-                        </svg>
+                        <ArrowIcon />
                       </a>
                     </li>
                   ))}

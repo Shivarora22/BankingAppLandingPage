@@ -1,31 +1,8 @@
 import './DigitalBanking.css'
-import laptopSVG from './laptop1.svg'
-import laptop2SVG from './Laptop2.svg'
 import CTABanner from '../CTABanner/CTABanner'
-
-function ArrowIcon() {
-  return (
-    <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0.467915 5.92647H11.3854" stroke="#00B4FD" strokeWidth="0.935782" strokeLinecap="round" strokeLinejoin="round"/>
-      <path d="M5.92665 0.467885L11.3854 5.92662L5.92665 11.3853" stroke="#00B4FD" strokeWidth="0.935782" strokeLinecap="round" strokeLinejoin="round"/>
-    </svg>
-  )
-}
-
-function CheckIcon() {
-  return (
-    <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
-      <defs>
-        <linearGradient id="db-check-grad" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(87.28, 0.5, 0.5)">
-          <stop offset="0%" stopColor="#00B4FD" />
-          <stop offset="100%" stopColor="#003ACE" />
-        </linearGradient>
-      </defs>
-      <circle cx="15" cy="15.5" r="9.26" fill="url(#db-check-grad)" />
-      <path d="M11.8 15.5L14.1 17.8L18.8 13.1" stroke="#E9F4F9" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  )
-}
+import { ArrowIcon, CheckIcon, BgTextCB7 } from '../../assets/icons'
+import laptopSVG from '../../assets/images/laptop1.svg'
+import laptop2SVG from '../../assets/images/Laptop2.svg'
 
 const leftFeatures = [
   'Customer-On Boarding',
@@ -48,24 +25,7 @@ export default function DigitalBanking() {
       {/* Section 1: text left, laptop right */}
       <section className="digital-banking">
 
-        <svg className="db-s1-bg-text" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="db-s1-cb7-stroke" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#00B4FD" />
-              <stop offset="100%" stopColor="#003ACE" />
-            </linearGradient>
-          </defs>
-          <text
-            x="0"
-            y="0.85em"
-            fontFamily="Archivo, sans-serif"
-            fontWeight="500"
-            fontSize="573"
-            fill="none"
-            stroke="url(#db-s1-cb7-stroke)"
-            strokeWidth="1.59"
-          >CB7</text>
-        </svg>
+        <BgTextCB7 className="db-s1-bg-text" />
 
         <div className="db-layout">
 
@@ -128,26 +88,7 @@ export default function DigitalBanking() {
         heading="Take the full advantage of going paper-less now."
         desc="CB7 helps your financial institution improve the client experience, automate and optimize procedures, simplify banking operations."
         style={{ backgroundColor: '#000D12', padding: '80px 0' }}
-        bgElement={
-          <svg className="cta-cb7-bg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="cta-cb7-stroke" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#00B4FD" />
-                <stop offset="100%" stopColor="#003ACE" />
-              </linearGradient>
-            </defs>
-            <text
-              x="0"
-              y="0.85em"
-              fontFamily="Archivo, sans-serif"
-              fontWeight="500"
-              fontSize="573"
-              fill="none"
-              stroke="url(#cta-cb7-stroke)"
-              strokeWidth="1.59"
-            >CB7</text>
-          </svg>
-        }
+        bgElement={<BgTextCB7 className="cta-cb7-bg" />}
       />
     </>
   )
