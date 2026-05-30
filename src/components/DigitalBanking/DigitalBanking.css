@@ -310,23 +310,31 @@
 
   .db-right {
     width: 100%;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-right: -24px;
+  }
+
+  .db-laptop {
+    max-width: 500px;
   }
 
   /* Section 2 */
   .db-section2 {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     padding: 60px 24px;
     gap: 40px;
     min-height: unset;
+    overflow: visible;
   }
 
   .db-s2-laptop-wrap {
-    width: 90%;
-    max-width: 500px;
+    width: calc(100% + 24px);
+    max-width: 524px;
     height: auto;
-    margin-left: 0;
+    margin-left: -24px;
+    align-self: flex-start;
+    flex-shrink: 0;
     aspect-ratio: 651.67 / 461.42;
   }
 
@@ -336,6 +344,8 @@
   }
 
   .db-s2-content {
+    flex: none;
+    width: 100%;
     max-width: 100%;
     align-items: flex-start;
     gap: 24px;
@@ -343,6 +353,7 @@
 
   .db-s2-heading {
     font-size: 24px;
+    padding-top: 60px;
   }
 }
 
@@ -375,6 +386,7 @@
 
   .db-s2-heading {
     font-size: 20px;
+    padding-top: 60px;
   }
 
   .db-s2-grid {

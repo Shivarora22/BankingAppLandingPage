@@ -19,10 +19,10 @@
 .trusted-by-logos {
   display: flex;
   align-items: center;
-  width: 621.36px;
-  height: 18.4px;
+  flex-wrap: wrap;
+  width: 100%;
   gap: 18.4px;
-  opacity: 0.9
+  opacity: 0.9;
 }
 
 .trusted-by-logo {
@@ -51,7 +51,6 @@
 @media (max-width: 1024px) {
   .trusted-by-logos {
     gap: 14px;
-    flex-wrap: wrap;
   }
 
   .trusted-by-name {
@@ -67,17 +66,7 @@
   }
 
   .trusted-by-logos {
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-
-  .trusted-by-label {
-    font-family: 'Archivo', sans-serif;
-    font-style: medium;
-    line-height: 130%;
-    letter-spacing: 0%;
-    font-size: 16px;
-    font-weight: 500;
+    gap: 16px 12px;
   }
 
   .trusted-by-name {

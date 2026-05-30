@@ -394,8 +394,17 @@
   }
 
   .cs-icons-grid {
-    width: 220px;
-    gap: 12px 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    width: 100%;
+    height: auto;
+    gap: 16px 24px;
+  }
+
+  .cs-icons-grid svg {
+    width: 75px;
+    height: 75px;
   }
 
   .cs-title { font-size: 28px; }
@@ -422,18 +431,22 @@
   }
 
   .cs-image-panel {
-    height: 180px;
+    height: 200px;
     border-radius: 9px;
   }
 
   .cs-icons-grid {
-    width: 180px;
-    gap: 10px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    width: 100%;
+    height: auto;
+    gap: 16px;
   }
 
   .cs-icons-grid svg {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
   }
 
   .cs-title { font-size: 22px; }

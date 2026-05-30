@@ -252,9 +252,14 @@
   .gc-inner {
     flex-direction: column;
     gap: 48px;
+    align-items: center;
   }
   .gc-left {
     width: 100%;
+    align-items: center;
+  }
+  .gc-heading {
+    text-align: center;
   }
   .gc-card-title {
     font-size: 22px;
@@ -278,7 +283,15 @@
     width: 100%;
     margin: 0;
     border-radius: 0;
-    height: 180px;
+    height: 200px;
+  }
+  .gc-icons-grid {
+    gap: 16px;
+    padding: 16px;
+  }
+  .gc-icons-grid svg {
+    width: 60px;
+    height: 60px;
   }
   .gc-card-body {
     padding: 28px 20px;
@@ -308,7 +321,7 @@
     gap: 20px;
   }
   .gc-card-image {
-    height: 150px;
+    height: 180px;
   }
   .gc-card-body,
   .gc-card-body--centered {
@@ -318,6 +331,11 @@
     font-size: 18px;
   }
   .gc-icons-grid {
-    gap: 16px;
+    gap: 12px;
+    padding: 14px;
+  }
+  .gc-icons-grid svg {
+    width: 52px;
+    height: 52px;
   }
 }
