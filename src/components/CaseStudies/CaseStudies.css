@@ -1,0 +1,446 @@
+/* ── Section ───────────────────────────────────────── */
+.case-studies {
+  width: 100%;
+  min-height: 872px;
+  background: #000D12;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0 72px;
+}
+
+/* ── Heading row ───────────────────────────────────── */
+.cs-heading-row {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.cs-heading {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 400;
+  font-size: 53px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #E9F4F9;
+}
+
+/* ── Carousel wrapper ──────────────────────────────── */
+.cs-carousel {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 33px;
+}
+
+/* ── Cards area ──────────────────────────────────────── */
+.cs-cards-area {
+  position: relative;
+  width: 100%;
+  height: 470px;
+  overflow: hidden;
+}
+
+/* ── Sliding track ───────────────────────────────────── */
+.cs-track {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ── Card (ghost + active shared base) ───────────────── */
+.cs-card {
+  flex-shrink: 0;
+  width: 1015px;
+  height: 438px;
+  background: #01141B;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 24px;
+  gap: 77px;
+  overflow: hidden;
+  opacity: 0.28;
+  transition: opacity 0.4s ease;
+}
+
+.cs-card-active {
+  opacity: 1;
+}
+
+/* ── Image panel (left) ────────────────────────────── */
+.cs-image-panel {
+  width: 421.51px;
+  height: 381.5px;
+  background: #07193C;
+  border-radius: 11.43px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cs-icons-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 24px 90px;
+  width: 367.5px;
+  height: 301.45px;
+}
+
+/* ── Card content (right) ──────────────────────────── */
+@keyframes cs-fade-in {
+  from { opacity: 0; transform: translateX(16px); }
+  to   { opacity: 1; transform: translateX(0);    }
+}
+
+.cs-card-active .cs-card-content {
+  animation: cs-fade-in 0.35s ease-out;
+}
+
+.cs-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 480px;
+  flex-shrink: 0;
+}
+
+.cs-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.cs-category {
+  font-family: 'Chivo Mono', monospace;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: left;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #2490BB;
+  opacity: 0.8;
+}
+
+.cs-title {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 400;
+  font-size: 43px;
+  line-height: 120%;
+  text-align: left;
+  color: #E9F4F9;
+  max-width: 422px;
+}
+
+.cs-company-row {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  align-items: center;
+  gap: 7.5px;
+}
+
+.cs-company-dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cs-company-name {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 22.5px;
+  line-height: 110%;
+  color: #586E84;
+}
+
+.cs-desc {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 400;
+  font-size: 13.98px;
+  line-height: 130%;
+  background: linear-gradient(180deg, rgba(233, 244, 249, 0.56) 68.76%, rgba(233, 244, 249, 0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0.7;
+  max-width: 360px;
+}
+
+.cs-read-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 431px;
+  height: 36px;
+  background: transparent;
+  border: 1px solid rgba(233, 244, 249, 0.5);
+  border-radius: 10px;
+  font-family: 'Chivo Mono', monospace;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: rgba(233, 244, 249, 0.5);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+  margin-top: 12px;
+}
+
+.cs-read-more:hover {
+    background: rgb(245, 242, 242);
+  color: #bc1dd4;
+}
+
+/* ── Nav row ───────────────────────────────────────── */
+.cs-nav-row {
+  position: relative;
+  width: 100%;
+  max-width: 1193px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 42px;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.cs-nav-center {
+  display: flex;
+  align-items: center;
+  gap: 31px;
+}
+
+.cs-nav-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  transition: opacity 0.2s;
+}
+
+.cs-nav-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+/* ── Pagination dots ───────────────────────────────── */
+.cs-dots {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7.73px;
+}
+
+.cs-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: transparent;
+  border: 0.86px solid #0B4B63;
+  padding: 0;
+  cursor: pointer;
+  transition: width 0.3s ease, border-radius 0.3s ease, background 0.2s;
+}
+
+.cs-dot-active {
+  width: 38px;
+  height: 12px;
+  border-radius: 6px;
+  background: #0B4B63;
+  border-color: transparent;
+}
+
+/* ── View All link ─────────────────────────────────── */
+.cs-view-all {
+  position: absolute;
+  right: 24px;
+  bottom: 0;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  text-decoration: none;
+}
+
+.cs-view-all-text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Chivo Mono', monospace;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #00B4FD;
+}
+
+.cs-view-all-line {
+  height: 1px;
+  background-color: #00B4FD;
+  width: 32px;
+  transition: width 300ms ease-out;
+}
+
+.cs-view-all:hover .cs-view-all-line {
+  width: 100%;
+}
+
+/* ── Responsive ────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .cs-cards-area {
+    overflow: visible;
+    height: auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+
+  .cs-track {
+    position: static !important;
+    transform: none !important;
+    flex-direction: column;
+    align-items: center;
+    transition: none;
+    gap: 0;
+  }
+
+  .cs-card {
+    display: none;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    padding: 28px;
+    gap: 36px;
+    opacity: 1;
+    box-sizing: border-box;
+  }
+
+  .cs-card-active {
+    display: flex;
+  }
+
+  .cs-image-panel {
+    width: 340px;
+    height: 280px;
+    flex-shrink: 0;
+  }
+
+  .cs-icons-grid {
+    width: 260px;
+    height: auto;
+    gap: 16px 60px;
+  }
+
+  .cs-card-content {
+    flex: 1;
+    width: auto;
+    min-width: 0;
+  }
+
+  .cs-read-more {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-studies {
+    padding: 48px 0 60px;
+  }
+
+  .cs-heading-row {
+    padding: 0 20px;
+    margin-bottom: 40px;
+  }
+
+  .cs-heading { font-size: 36px; }
+
+  .cs-cards-area {
+    padding: 0 16px;
+  }
+
+  .cs-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    padding: 20px;
+  }
+
+  .cs-image-panel {
+    width: 100%;
+    height: 220px;
+  }
+
+  .cs-icons-grid {
+    width: 220px;
+    gap: 12px 50px;
+  }
+
+  .cs-title { font-size: 28px; }
+
+  .cs-nav-row {
+    flex-direction: column;
+    height: auto;
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  .cs-view-all {
+    position: static;
+    right: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .cs-heading { font-size: 28px; }
+
+  .cs-card {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .cs-image-panel {
+    height: 180px;
+    border-radius: 9px;
+  }
+
+  .cs-icons-grid {
+    width: 180px;
+    gap: 10px 40px;
+  }
+
+  .cs-icons-grid svg {
+    width: 70px;
+    height: 70px;
+  }
+
+  .cs-title { font-size: 22px; }
+
+  .cs-company-name { font-size: 18px; }
+
+  .cs-nav-center {
+    gap: 20px;
+  }
+}
