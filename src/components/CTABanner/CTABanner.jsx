@@ -3,8 +3,8 @@ import './CTABanner.css'
 export default function CTABanner({ bgElement, style , heading, desc}) {
   return (
     <section className="cta-banner" style={style}>
-      {bgElement}
       <div className="cta-banner-inner">
+        {bgElement}
         <div className="cta-banner-content">
           <h2 className="cta-banner-heading">
             {heading || 'Ready to transform your banking experience?'}
@@ -19,5 +19,6 @@ export default function CTABanner({ bgElement, style , heading, desc}) {
         </div>
       </div>
     </section>
+
   )
 }

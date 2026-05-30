@@ -1,6 +1,6 @@
 .cta-banner {
   position: relative;
-  background-color: #000D12;
+
 }
 
 .cta-n7-watermark {
@@ -16,6 +16,7 @@
 .cta-banner-inner {
   position: relative;
   z-index: 1;
+  overflow: hidden;
   min-height: 427px;
   max-width: 1279px;
   width: calc(100% - 162px);

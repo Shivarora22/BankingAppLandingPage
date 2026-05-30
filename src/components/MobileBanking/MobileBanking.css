@@ -1,0 +1,493 @@
+.mobile-banking {
+  width: 100%;
+ background: #E9F4F9;
+  overflow: hidden;
+}
+
+/* Marquee header */
+.mobile-banking-header {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f5f5f0;
+  padding: 14px 0;
+  border-top: 1px solid #e0e0d8;
+  border-bottom: 1px solid #e0e0d8;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 30s linear infinite;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-right: 32px;
+  white-space: nowrap;
+}
+
+.marquee-text {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 600;
+  font-size: 47px;
+  line-height: 120%;
+  color: #000D12;
+}
+
+.marquee-brand {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 500;
+  font-size: 47px;
+  line-height: 120%;
+  background: linear-gradient(90deg, #00B4FD, #003ACE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.marquee-hand {
+  font-size: 47px;
+  display: inline-block;
+  animation: wave 1.6s ease-in-out infinite;
+  transform-origin: 70% 80%;
+}
+
+.marquee-separator {
+  display: flex;
+  align-items: center;
+}
+
+.marquee-separator svg {
+  width: 47px;
+  height: 47px;
+}
+
+/* Feature sections */
+.mb-features {
+  background: #E9F4F9;
+  padding: 80px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.mb-spiral {
+  position: absolute;
+  width: 1243px;
+  height: 1245px;
+  top: 418px;
+  left: -763px;
+  opacity: 0.2;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Outer two-column split — left intro | right phones */
+.mb-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.mb-left {
+  position: sticky;
+  top: 80px;
+}
+
+/* Right column stacks phone rows */
+.mb-right {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  min-width: 0;
+  position: relative;
+}
+
+.mb-bg-text {
+  position: absolute;
+  top: -119.74px;
+  left: 8.5%;
+  transform: translateX(-50%);
+  width: 744px;
+  height: 687px;
+  opacity: 0.5;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  overflow: visible;
+}
+
+.mb-row,
+.mb-feature-card {
+  position: relative;
+  z-index: 1;
+}
+
+/* Each phone + feature pair inside the right column */
+.mb-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.mb-row > * {
+  min-width: 0;
+}
+
+
+.mb-heading {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 400;
+  font-size: 53px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  opacity: 0.95;
+  color: #000D12;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.mb-desc {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 400;
+  opacity: 0.7;
+  font-size: 16px;
+  line-height: 130%;
+  color: #000D12;
+  letter-spacing: 0em;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.mb-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.mb-btn-blue {
+  padding: 15px 51px 15px 51px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(106.53deg, #00B4FD -5.68%, #003ACE 86.98%);
+  font-family: 'Chivo Mono', monospace;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  line-height: 130%;
+  letter-spacing: 0em;
+}
+
+.mb-btn-blue:hover {
+ background: rgb(245, 242, 242);
+  color: #bc1dd4;
+  box-shadow: 0px 4px 15px rgba(4, 5, 8, 0.3);
+}
+
+.mb-btn-link {
+  background: none;
+  border: none;
+  font-family: 'Chivo Mono', monospace;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 130%;
+  letter-spacing: 0em;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1a6cff;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 2px;
+  border-bottom: 1px solid rgba(0, 180, 253, 0.3);
+}
+
+.mb-btn-link::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #00B4FD;
+  transition: width 300ms ease-out;
+}
+
+.mb-btn-link:hover::after {
+  width: 100%;
+}
+
+.mb-phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.mb-phone img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 24px 48px rgba(0, 60, 200, 0.15));
+}
+
+.mb-feature-heading {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: #000D12;
+  letter-spacing: 0em;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.mb-feature-desc {
+  font-family: 'Archivo', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.7;
+  font-style: Regular;
+  line-height: 130%;
+  color: #000D12;
+
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.mb-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mb-bullets li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Archivo', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000D12;
+}
+
+.mb-bullets li svg {
+  flex-shrink: 0;
+}
+
+.cta-n7-bg {
+  position: absolute;
+  top: -140.72px;
+  left: 480.56px;
+  width: 744px;
+  height: 687px;
+  opacity: 0.5;
+  pointer-events: none;
+  user-select: none;
+  overflow: visible;
+  z-index: 2;
+}
+
+/* ── Responsive ──────────────────────────────────── */
+
+@media (max-width: 1200px) {
+  .cta-n7-bg {
+    width: 560px;
+    height: 517px;
+    left: 340px;
+    top: -100px;
+  }
+
+  .marquee-text,
+  .marquee-brand,
+  .marquee-hand {
+    font-size: 36px;
+  }
+
+  .marquee-separator svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .mb-features {
+    padding: 64px 48px;
+  }
+
+  .mb-heading {
+    font-size: 44px;
+  }
+
+  .mb-layout {
+    grid-template-columns: 1fr 1.6fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cta-n7-bg {
+    width: 420px;
+    height: 388px;
+    left: 220px;
+    top: -80px;
+  }
+
+  /* Stack left intro above right phones */
+  .mb-layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .mb-left {
+    position: static;
+  }
+
+  .mb-features {
+    padding: 56px 40px;
+  }
+
+  .mb-heading {
+    font-size: 40px;
+  }
+
+  .mb-right {
+    gap: 64px;
+  }
+
+  .mb-row {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-n7-bg {
+    width: 280px;
+    height: 258px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -40px;
+    opacity: 0.3;
+  }
+
+  .marquee-text,
+  .marquee-brand,
+  .marquee-hand {
+    font-size: 26px;
+  }
+
+  .marquee-separator svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .mobile-banking-header {
+    padding: 10px 0;
+  }
+
+  .mb-features {
+    padding: 48px 24px;
+  }
+
+  .mb-heading {
+    font-size: 34px;
+  }
+
+  .mb-desc {
+    font-size: 15px;
+  }
+
+  /* Each phone + text row becomes single column */
+  .mb-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* On mobile, always show phone above text */
+  .mb-row .mb-feature-card {
+    order: 2;
+  }
+
+  .mb-row .mb-phone {
+    order: 1;
+  }
+
+  .mb-phone img {
+    max-width: 220px;
+  }
+
+  .mb-right {
+    gap: 56px;
+  }
+
+  .mb-btn-blue {
+    padding: 13px 32px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-n7-bg {
+    display: none;
+  }
+
+  .marquee-text,
+  .marquee-brand,
+  .marquee-hand {
+    font-size: 20px;
+  }
+
+  .marquee-separator svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .mb-features {
+    padding: 40px 16px;
+  }
+
+  .mb-heading {
+    font-size: 28px;
+  }
+
+  .mb-feature-heading {
+    font-size: 15px;
+  }
+
+  .mb-feature-desc,
+  .mb-desc {
+    font-size: 14px;
+  }
+
+  .mb-phone img {
+    max-width: 180px;
+  }
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes wave {
+  0%   { transform: rotate(0deg); }
+  15%  { transform: rotate(14deg); }
+  30%  { transform: rotate(-8deg); }
+  45%  { transform: rotate(14deg); }
+  60%  { transform: rotate(-4deg); }
+  75%  { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
