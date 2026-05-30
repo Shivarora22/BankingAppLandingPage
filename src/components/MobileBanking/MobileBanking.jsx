@@ -15,16 +15,16 @@ function loadAnimationSVG(){
 function loadArrowSVG() {
   return (
 <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.467915 5.92647H11.3854" stroke="url(#paint0_linear_16888_289)" stroke-width="0.935782" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M5.92665 0.467885L11.3854 5.92662L5.92665 11.3853" stroke="url(#paint1_linear_16888_289)" stroke-width="0.935782" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0.467915 5.92647H11.3854" stroke="url(#paint0_linear_16888_289)" strokeWidth="0.935782" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M5.92665 0.467885L11.3854 5.92662L5.92665 11.3853" stroke="url(#paint1_linear_16888_289)" strokeWidth="0.935782" strokeLinecap="round" strokeLinejoin="round"/>
 <defs>
 <linearGradient id="paint0_linear_16888_289" x1="22.5636" y1="8.43162" x2="15.5685" y2="-2.84506" gradientUnits="userSpaceOnUse">
-<stop stop-color="#00B4FD"/>
-<stop offset="1" stop-color="#003ACE"/>
+<stop stopColor="#00B4FD"/>
+<stop offset="1" stopColor="#003ACE"/>
 </linearGradient>
 <linearGradient id="paint1_linear_16888_289" x1="10.0793" y1="22.898" x2="5.43052" y2="21.232" gradientUnits="userSpaceOnUse">
-<stop stop-color="#00B4FD"/>
-<stop offset="1" stop-color="#003ACE"/>
+<stop stopColor="#00B4FD"/>
+<stop offset="1" stopColor="#003ACE"/>
 </linearGradient>
 </defs>
 </svg>
@@ -55,8 +55,8 @@ const CheckIcon = () => (
 <path d="M13.2437 18.3328L11.3438 16.4329C11.2415 16.3306 11.1026 16.2731 10.9579 16.2731C10.8131 16.2731 10.6742 16.3306 10.5719 16.4329C10.4695 16.5353 10.412 16.6742 10.412 16.8189C10.412 16.8906 10.4261 16.9616 10.4535 17.0278C10.481 17.094 10.5212 17.1542 10.5719 17.2049L12.8604 19.4935C13.0739 19.707 13.4189 19.707 13.6324 19.4935L19.4249 13.7009C19.5273 13.5985 19.5848 13.4597 19.5848 13.3149C19.5848 13.1702 19.5273 13.0313 19.4249 12.9289C19.3226 12.8266 19.1837 12.7691 19.039 12.7691C18.8942 12.7691 18.7553 12.8266 18.653 12.9289L13.2437 18.3328Z" fill="#E9F4F9"/>
 <defs>
 <linearGradient id="paint0_linear_24_4119" x1="-9.11863" y1="-15.9254" x2="25.1246" y2="-17.5505" gradientUnits="userSpaceOnUse">
-<stop stop-color="#00B4FD"/>
-<stop offset="0.815786" stop-color="#003ACE"/>
+<stop stopColor="#00B4FD"/>
+<stop offset="0.815786" stopColor="#003ACE"/>
 </linearGradient>
 </defs>
 </svg>
