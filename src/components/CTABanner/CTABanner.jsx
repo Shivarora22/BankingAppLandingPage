@@ -1,9 +1,9 @@
 import './CTABanner.css'
 
-export default function CTABanner({ bgElement, style , heading, desc}) {
+export default function CTABanner({ bgElement, style, innerStyle, heading, desc }) {
   return (
     <section className="cta-banner" style={style}>
-      <div className="cta-banner-inner">
+      <div className="cta-banner-inner" style={innerStyle}>
         {bgElement}
         <div className="cta-banner-content">
           <h2 className="cta-banner-heading">
