@@ -98,7 +98,10 @@ export default function MobileBanking() {
             <p className="mb-desc">N7 helps your financial institution improve the client experience, automate and optimize procedures.</p>
             <div className="mb-buttons">
               <button className="mb-btn-blue">Request Demo</button>
-              <button className="mb-btn-link">Learn More {loadArrowSVG()}</button>
+              <button className="mb-btn-link">
+                <span className="mb-btn-link-text">Learn More {loadArrowSVG()}</span>
+                <div className="mb-btn-link-line" />
+              </button>
             </div>
           </div>
 

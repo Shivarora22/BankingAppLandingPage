@@ -98,6 +98,22 @@ const solutions = [
   { title: 'Loan Management System', desc: 'N7 brings full capabilities across strategy, human-centred design, operations, engineering and data science to create and deliver disruptive innovation. Our approach to building digital banks is specifically designed to help clients.', Icon: StarIcon, tag: 'NBFC' }
 ]
 
+function ArrowIcon() {
+  return (
+    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clipPath="url(#clip0_16888_252)">
+        <path d="M1.4627 7.48608H12.3802" stroke="#00B4FD" strokeWidth="0.935782" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M6.92146 2.02761L12.3802 7.48634L6.92146 12.9451" stroke="#00B4FD" strokeWidth="0.935782" strokeLinecap="round" strokeLinejoin="round"/>
+      </g>
+      <defs>
+        <clipPath id="clip0_16888_252">
+          <rect width="13.5688" height="14.5046" fill="white" transform="translate(13.5688 14.5046) rotate(-180)"/>
+        </clipPath>
+      </defs>
+    </svg>
+  )
+}
+
 export default function SolutionsGrid() {
   return (
     <section className="solutions">
@@ -118,7 +134,10 @@ export default function SolutionsGrid() {
                 <h3 className="solutions-card-title">{title}</h3>
               </div>
               <p className="solutions-card-desc">{desc}</p>
-              <a href="#" className="solutions-card-link">Learn More →</a>
+              <a href="#" className="solutions-card-link">
+                <span className="solutions-card-link-text">Learn More <ArrowIcon /></span>
+                <div className="solutions-card-link-line" />
+              </a>
             </div>
           ))}
         </div>

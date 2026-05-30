@@ -193,10 +193,12 @@
 .mb-btn-link {
   background: none;
   border: none;
+  padding: 0;
   font-family: 'Chivo Mono', monospace;
   display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
   line-height: 130%;
   letter-spacing: 0em;
   text-transform: uppercase;
@@ -204,23 +206,22 @@
   font-weight: 400;
   color: #1a6cff;
   cursor: pointer;
-  position: relative;
-  padding-bottom: 2px;
-  border-bottom: 1px solid rgba(0, 180, 253, 0.3);
 }
 
-.mb-btn-link::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 0;
+.mb-btn-link-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mb-btn-link-line {
   height: 1px;
   background-color: #00B4FD;
+  width: 32px;
   transition: width 300ms ease-out;
 }
 
-.mb-btn-link:hover::after {
+.mb-btn-link:hover .mb-btn-link-line {
   width: 100%;
 }
 

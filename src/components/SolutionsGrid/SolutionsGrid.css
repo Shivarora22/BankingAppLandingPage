@@ -121,24 +121,26 @@
   text-decoration: none;
   letter-spacing: 0.05em;
   display: inline-flex;
-  align-items: right;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
   width: fit-content;
-  position: relative;
-  border-bottom: 1px solid rgba(0, 180, 253, 0.3);
 }
 
-.solutions-card-link::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 0;
+.solutions-card-link-text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.solutions-card-link-line {
   height: 1px;
   background-color: #00B4FD;
+  width: 32px;
   transition: width 300ms ease-out;
 }
 
-.solutions-card-link:hover::after {
+.solutions-card-link:hover .solutions-card-link-line {
   width: 100%;
 }
 
