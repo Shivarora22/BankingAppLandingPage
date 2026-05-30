@@ -3,9 +3,13 @@ import './Navbar.css'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 10)
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10)
+      if (window.scrollY > 10) setMenuOpen(false)
+    }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -22,7 +26,26 @@ export default function Navbar() {
         <div className="navbar-actions">
           <button className="navbar-cta">Request Demo</button>
         </div>
+        <button
+          className={`navbar-hamburger ${menuOpen ? 'open' : ''}`}
+          onClick={() => setMenuOpen(prev => !prev)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
       </nav>
+
+      <div className={`navbar-mobile-menu ${menuOpen ? 'open' : ''}`}>
+        <ul className="navbar-mobile-links">
+          <li><a href="#" onClick={() => setMenuOpen(false)}>Solutions <span className="navbar-arrow">›</span></a></li>
+          <li><a href="#" onClick={() => setMenuOpen(false)}>Resources <span className="navbar-arrow">›</span></a></li>
+          <li><a href="#" onClick={() => setMenuOpen(false)}>About Us</a></li>
+        </ul>
+        <button className="navbar-cta navbar-mobile-cta">Request Demo</button>
+      </div>
     </div>
   )
 }

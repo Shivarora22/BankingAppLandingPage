@@ -2,6 +2,8 @@
   width: 100%;
   background-color: #000D12;
   padding: 96px 80px;
+  position: relative;
+  overflow: hidden;
 }
 
 .solutions-inner {
